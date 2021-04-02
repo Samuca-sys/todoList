@@ -1,3 +1,5 @@
+import TodoList from './TodoList';
+
 export default function App() {
   let items = [
     {
@@ -20,22 +22,7 @@ export default function App() {
   return (
     <div className="container">
       <div className="content">
-        <header >
-          <h1>THINGS TO DO</h1>
-        </header>
-
-        <section>
-          <ul className="list">
-            {/*render list dinamically using array items  */}
-            {items.map(item => (
-              <li key={item.id}>
-                <label>
-                <input type="checkbox" value=""/> {item.text}
-                </label>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <TodoList items={items}/>
       </div>
     </div>  
   );
