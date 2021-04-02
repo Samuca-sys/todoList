@@ -1,29 +1,40 @@
 export default function App() {
+  let items = [
+    {
+      id: 1,
+      text: 'Learn JavaScript',
+      isCompleted: false,
+    },
+    {
+      id: 2,
+      text: 'Learn React',
+      isCompleted: false,
+    },
+    {
+      id: 3,
+      text: 'Build a React App',
+      isCompleted: false,
+    }
+
+  ]
   return (
     <div className="container">
-        <div className="content">
-          <header >
-            <h1>THINGS TO DO</h1>
-          </header>
+      <div className="content">
+        <header >
+          <h1>THINGS TO DO</h1>
+        </header>
 
-          <section>
-            <ul className="list">
-              <li>
+        <section>
+          <ul className="list">
+            {/*render list dinamically using array items  */}
+            {items.map(item => (
+              <li key={item.id}>
                 <label>
-                  <input type="checkbox" value=""/> Take ou the trash
+                <input type="checkbox" value=""/> {item.text}
                 </label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" value=""/> Buy bread
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" value=""/> Teach penguins to fly
-                </label>
-              </li>
-            </ul>
+            ))}
+          </ul>
         </section>
       </div>
     </div>  
