@@ -22,7 +22,7 @@ export default class InputBox extends React.Component {
   handleOnKeyUp(event) {
     const {addNew} = this.props;
     const text = this.state.value.trim();//remove whitespace
-    if(event.keyCode === KeyCode.KEY_RETURN){//if pressed return key
+    if(event.keyCode === KeyCode.KEY_RETURN && text){//if pressed return key
       //Add new TodoItem
       addNew(text);
       //Clear the text box

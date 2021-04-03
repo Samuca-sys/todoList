@@ -30,7 +30,7 @@ export default class App extends React.Component {
   }  
   addNew(text) {
     let item = {
-      id: this.state.items.length + 1,
+      id: this.state.items.length + 1,//next id
       text: text
     };
     let updateList = this.state.items.concat([item]);//join items to item array
