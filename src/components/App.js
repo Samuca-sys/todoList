@@ -28,12 +28,24 @@ export default class App extends React.Component {
       ]
     }
   }  
+  addNew(text) {
+    let item = {
+      id: this.state.items.length + 1,
+      text: text
+    };
+    let updateList = this.state.items.concat([item]);//join items to item array
+
+    this.setState({
+      items: updateList
+    })
+  }
+
   render() {
     return (
       <div className="container">
         <div className="content">
           <Header />
-          <InputBox />
+          <InputBox addNew={this.addNew}/>
           <TodoList items={this.state.items}/>
           <Footer count={this.state.items.length}/>
         </div>
