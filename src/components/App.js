@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import TodoList from './TodoList';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
     <div className="container">
       <div className="content">
         <TodoList items={items}/>
+        <Footer />
       </div>
     </div>  
   );
