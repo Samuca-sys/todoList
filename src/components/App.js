@@ -26,7 +26,7 @@ export default function App() {
       <div className="content">
         <Header />
         <TodoList items={items}/>
-        <Footer />
+        <Footer count={items.length}/>
       </div>
     </div>  
   );

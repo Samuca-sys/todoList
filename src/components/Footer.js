@@ -1,8 +1,9 @@
-export default function Footer() {
+export default function Footer(props) {
+  const {count} = props
   return (
     <footer>
       <strong>
-        <span>0 </span>
+        <span>{count} </span>
       </strong>
       {'items left'}
     </footer>
