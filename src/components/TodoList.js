@@ -8,7 +8,7 @@ export default function TodoList(props) {
       <section>
         <ul className="list">
           {/*render list dinamically using array items from App*/}
-          {items.map(item => (<TodoItem item={item}/>))}
+          {items.map(item => (<TodoItem item={item} key={item.id}/>))}
         </ul>
       </section>
     </>
