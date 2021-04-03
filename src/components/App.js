@@ -1,3 +1,4 @@
+import Header from './Header';
 import Footer from './Footer';
 import TodoList from './TodoList';
 
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <div className="container">
       <div className="content">
+        <Header />
         <TodoList items={items}/>
         <Footer />
       </div>

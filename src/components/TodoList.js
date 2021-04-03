@@ -1,4 +1,3 @@
-import Header from "./Header";
 import TodoItem from "./TodoItem";
 
 export default function TodoList(props) {
@@ -6,7 +5,6 @@ export default function TodoList(props) {
 
   return (
     <>
-      <Header />
       <section>
         <ul className="list">
           {/*render list dinamically using array items from App*/}
