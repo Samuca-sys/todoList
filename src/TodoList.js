@@ -1,22 +1,18 @@
+import TodoItem from "./TodoItem";
+
 export default function TodoList(props) {
   const {items} = props;
 
   return (
     <>
-      <header >
+      <header>
         <h1>THINGS TO DO</h1>
       </header>
 
       <section>
         <ul className="list">
-          {/*render list dinamically using array items  */}
-          {items.map(item => (
-            <li key={item.id}>
-              <label>
-                <input type="checkbox" value=""/> {item.text}
-              </label>
-            </li>
-          ))}
+          {/*render list dinamically using array items from App*/}
+          {items.map(item => (<TodoItem item={item}/>))}
         </ul>
       </section>
     </>
