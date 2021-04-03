@@ -1,7 +1,7 @@
 import React from 'react';
 import * as KeyCode from 'keycode-js';
 
-class InputBox extends React.Component {
+export default class InputBox extends React.Component {
   constructor (props) {
     super(props)
     this.state = { 
@@ -35,5 +35,3 @@ class InputBox extends React.Component {
     )
   }
 }
-
-export default InputBox;
