@@ -45,7 +45,7 @@ export default class App extends React.Component {
       <div className="container">
         <div className="content">
           <Header />
-          <InputBox addNew={this.addNew}/>
+          <InputBox addNew={this.addNew.bind(this)}/>
           <TodoList items={this.state.items}/>
           <Footer count={this.state.items.length}/>
         </div>
