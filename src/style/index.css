@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #777777;
 }
 
 html,
@@ -55,7 +56,6 @@ ul {
 ul li {
   border: none;
   border-bottom: 1px solid var(--gray-200);
-  color: #777777;
   padding: 0.8rem 0 0.8rem 0;
 }
 
@@ -68,4 +68,8 @@ footer {
   margin: 0 -1rem 0 -1rem;
   padding: 1rem 2rem;
   border-top: 1px solid var(--gray-200);
+}
+
+footer span {
+  font-weight: normal;
 }
