@@ -3,7 +3,7 @@ export default function TodoItem(props) {
   return (
     <li key={item.id}>
       <label>
-        <input type="checkbox" value=""/> {item.text}
+        <input type="checkbox" value="" className="todo-item"/> {item.text}
       </label>
     </li>
   )

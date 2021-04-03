@@ -26,7 +26,7 @@ body,
 button {
   cursor: pointer;
 }
-
+/*------------------- */
 .content {
   max-width: 600px;
   margin: 0 auto;
@@ -46,9 +46,17 @@ h1 {
   font-size: 2.25rem;
   color: var(--gray-500);
   font-weight: normal;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
+input.add-todo {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-200);
+  font-size: 1rem;
+}
+
+/*------------------- */
 ul {
   list-style-type: none;
 }
@@ -57,12 +65,13 @@ ul li {
   border: none;
   border-bottom: 1px solid var(--gray-200);
   padding: 0.8rem 0 0.8rem 0;
+  color: var(--gray-500);
 }
 
 ul li:last-child {
   border-bottom: none;
 }
-
+/*------------------- */
 footer {
   background: var(--green);
   margin: 0 -1rem 0 -1rem;

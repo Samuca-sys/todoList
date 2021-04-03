@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import TodoList from './TodoList';
+import InputBox from './InputBox';
 
 export default function App() {
   let items = [
@@ -25,6 +26,7 @@ export default function App() {
     <div className="container">
       <div className="content">
         <Header />
+        <InputBox />
         <TodoList items={items}/>
         <Footer count={items.length}/>
       </div>
