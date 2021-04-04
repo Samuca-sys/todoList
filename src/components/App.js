@@ -51,7 +51,7 @@ export default class App extends React.Component {
         <div className="content">
           <Header />
           <InputBox addNew={this.addNew.bind(this)}/>
-          <TodoList items={this.state.items}/>
+          <TodoList items={this.state.items} filter={this.state.filter}/>
           <Footer 
             count={this.state.items.length} 
             handleOnChangeFilter={this.handleOnChangeFilter.bind(this)}
