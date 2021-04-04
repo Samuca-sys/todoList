@@ -1,18 +1,10 @@
 import TodoItem from "./TodoItem";
 
+import {applyFilter} from './../services/filter'
+
 export default function TodoList(props) {
   const {items, filter} = props;
   const filteredList = applyFilter(items, filter)
-
-  function applyFilter(list, filter) {
-    switch (filter) {
-      case 'completed':
-        return list.filter(item => item.completed === true);
-      case 'active':
-        return list.filter(item => item.active !== true);
-    default: return list;
-    }
-  }
 
   return (
     <>
