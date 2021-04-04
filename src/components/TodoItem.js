@@ -1,9 +1,11 @@
+import CheckBox from "./CkeckBox";
+
 export default function TodoItem(props) {
-  const {item} = props;
+  const {item, completed} = props;
   return (
     <li>
       <label>
-        <input type="checkbox" value="" className="todo-item"/> {item.text}
+        <CheckBox isChecked={completed}/> {item.text}
       </label>
     </li>
   )
