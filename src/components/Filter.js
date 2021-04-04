@@ -1,12 +1,9 @@
+import {getOptions} from './../services/filter';
+
 export default function Filter(props) {
   const { filter, changeFilter } = props
   const getClass = (key) => (key === filter ? 'selected' : '');
-
-  const options = {
-      'all': 'All',
-      'active': 'Active',
-      'completed': 'Completed'
-  };
+  const options = getOptions();
 
   return (
     <div className="filter-list">

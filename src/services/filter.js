@@ -1,9 +1,21 @@
+const FILTER_ALL = 'all';
+const FILTER_ACTIVE = 'active';
+const FILTER_COMPLETED = 'completed';
+
 export function applyFilter(list, filter) {
   switch (filter) {
-    case 'completed':
+    case FILTER_COMPLETED:
       return list.filter(item => item.completed === true);
-    case 'active':
+    case FILTER_ACTIVE:
       return list.filter(item => item.active !== true);
   default: return list;
   }
 }
+
+export function getOptions() {
+  return {
+    [FILTER_ALL]: 'All',
+    [FILTER_ACTIVE]: 'Active',
+    [FILTER_COMPLETED]: 'Completed'
+  }
+};
