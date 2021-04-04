@@ -9,6 +9,7 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = { 
+      filter: 'active',
       items: [
         {
           id: 1,
@@ -47,7 +48,7 @@ export default class App extends React.Component {
           <Header />
           <InputBox addNew={this.addNew.bind(this)}/>
           <TodoList items={this.state.items}/>
-          <Footer count={this.state.items.length}/>
+          <Footer count={this.state.items.length} {...this.state}/>{/*use all arguments from this.state*/}
         </div>
       </div>  
     );

@@ -1,9 +1,21 @@
-export default function Filter() {
+export default function Filter(props) {
+    const { filter } = props
+    const options = {
+      'all': 'All',
+      'active': 'Active',
+      'completed': 'Completed'
+    };
+
     return (
       <div className="filter-list">
-        <a className="selected">All</a>
-        <a>Active</a>
-        <a>Completed</a>
+        {Object.keys(options).map(key =>(
+          <a 
+            key={key} 
+            className={key === filter ? 'selected' : ''}
+          >
+            {options[key]}
+          </a>
+        ))}  
       </div>
     )
 }

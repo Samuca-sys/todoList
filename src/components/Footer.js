@@ -1,7 +1,7 @@
 import Filter from "./Filter"
 
 export default function Footer(props) {
-  const {count} = props
+  const {count, filter} = props
   return (
     <footer>
       <nav>
@@ -11,7 +11,7 @@ export default function Footer(props) {
           </strong>
           <span>items left</span>
         </div>
-      <Filter />
+      <Filter filter={filter} />
       </nav>
     </footer>
   )
