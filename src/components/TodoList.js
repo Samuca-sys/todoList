@@ -9,10 +9,16 @@ export default function TodoList(props) {
   return (
     <>
       <section>
-        <ul className="item-list">
+        {filteredList.length > 0 ?(
+          <ul className="item-list">
           {/*render list dinamically using array items from App*/}
           {filteredList.map(item => (<TodoItem item={item} key={item.id}/>))}
         </ul>
+        )
+        : (
+          <p>There are no items.</p>
+        )}
+        
       </section>
     </>
   )

@@ -48,6 +48,8 @@ ul {
   justify-content: center;
 }
 
+/*---------Header---------- */
+
 h1 {
   font-size: 2.25rem;
   color: var(--gray-500);
@@ -62,7 +64,7 @@ input.add-todo {
   font-size: 1rem;
 }
 
-/*------------------- */
+/*---------Section---------- */
 
 ul.item-list li {
   border: none;
@@ -75,7 +77,16 @@ ul.item-list li:last-child {
   border-bottom: none;
 }
 
-/*------------------- */
+section p {
+  margin: 0.5rem 0 0.5rem 0;
+  width: 100%;
+  padding: 1rem 0 1rem 0.5rem;
+  font-size: 1rem;
+  background-color: var(--gray-100);
+}
+
+/*--------Footer----------- */
+
 footer {
   background: var(--green);
   margin: 0 -1rem 0 -1rem;
