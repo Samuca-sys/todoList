@@ -41,6 +41,10 @@ export default class App extends React.Component {
     })
   }
 
+  handleOnChangeFilter(filter) {
+    this.setState({filter})
+  }
+
   render() {
     return (
       <div className="container">
@@ -48,7 +52,11 @@ export default class App extends React.Component {
           <Header />
           <InputBox addNew={this.addNew.bind(this)}/>
           <TodoList items={this.state.items}/>
-          <Footer count={this.state.items.length} {...this.state}/>{/*use all arguments from this.state*/}
+          <Footer 
+            count={this.state.items.length} 
+            handleOnChangeFilter={this.handleOnChangeFilter.bind(this)}
+            {...this.state}
+          />
         </div>
       </div>  
     );

@@ -1,7 +1,7 @@
 import Filter from "./Filter"
 
 export default function Footer(props) {
-  const {count, filter} = props
+  const {count, filter, handleOnChangeFilter} = props
   return (
     <footer>
       <nav>
@@ -11,7 +11,7 @@ export default function Footer(props) {
           </strong>
           <span>items left</span>
         </div>
-      <Filter filter={filter} />
+      <Filter filter={filter} changeFilter={handleOnChangeFilter}/>
       </nav>
     </footer>
   )
