@@ -5,7 +5,7 @@ import Footer from './Footer';
 import TodoList from './TodoList';
 import InputBox from './InputBox';
 
-import {createNew, getAll} from './../services/todo';
+import {addToList, getAll} from './../services/todo';
 
 export default class App extends React.Component {
   constructor() {
@@ -16,9 +16,7 @@ export default class App extends React.Component {
     }
   }  
   addNew(text) {
-    let item = createNew(text);
-    let updateList = this.state.items.concat([item]);//join items to item array
-
+    let updateList = addToList(this.state.items, {text, completed: false});
     this.setState({
       items: updateList
     })

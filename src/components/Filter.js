@@ -7,6 +7,7 @@ export default function Filter(props) {
 
   return (
     <div className="filter-list">
+      {/*list the enumerable properties of an object*/}
       {Object.keys(options).map(key =>(
         <a onClick={() => changeFilter(key)} className={getClass(key)}>
           {options[key]}

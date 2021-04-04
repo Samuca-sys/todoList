@@ -22,11 +22,24 @@ export function getAll() {
   ]
 }
 
-export function createNew(text) {
-  let nextId = this.state.items.length + 1;
-    let item = {
-      id: nextId,
-      text: text
-    };
-  return item;
+// A counter to generate a unique id for a todo item.
+// @type {Number}
+
+let todoCounter = 1;
+
+function getNextId() {
+  return getAll().length + todoCounter++// |3| => constant + (?) => variable
+}
+
+//Adds a new item on the list and returns the new updated list (immutable).
+//@param {Array} list
+//@param {Object} list
+//@param {Array} 
+
+export function addToList(list, data) {
+  let item = Object.assign({//join array to a new item
+    id: getNextId()
+  }, data)
+  return list.concat([item]);//same as this.state.items.concat([item]);
+  //join items to item array
 }
