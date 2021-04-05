@@ -5,7 +5,7 @@ export default function TodoItem(props) {
   const handleCheckBoxChange = 
     (checked) => handleChangeStatus(item.id, checked);
   return (
-    <li>
+    <li className={item.completed === true ? 'completed': ''}>
       <label>
         <CheckBox 
           checked={item.completed} 

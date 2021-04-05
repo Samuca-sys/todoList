@@ -77,6 +77,11 @@ ul.item-list li:last-child {
   border-bottom: none;
 }
 
+ul.item-list li.completed label {
+  text-decoration: line-through;
+  color: var(--gray-200);
+}
+
 section p {
   margin: 0.5rem 0 0.5rem 0;
   width: 100%;
