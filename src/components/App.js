@@ -5,7 +5,7 @@ import Footer from './Footer';
 import TodoList from './TodoList';
 import InputBox from './InputBox';
 
-import {addToList, getAll} from './../services/todo';
+import {addToList, getAll, updateStatus} from './../services/todo';
 
 export default class App extends React.Component {
   constructor() {
@@ -16,14 +16,20 @@ export default class App extends React.Component {
     }
   }  
   addNew(text) {
-    let updateList = addToList(this.state.items, {text, completed: false});
+    let updatedList = addToList(this.state.items, {text, completed: false});
     this.setState({
-      items: updateList
+      items: updatedList
     })
   }
 
   handleOnChangeFilter(filter) {
     this.setState({filter})
+  }
+
+  handleOnChangeStatus(itemId, completed) {
+    const updatedList = updateStatus(this.state.items, itemId, completed);
+
+    this.setState({items: updatedList});
   }
 
   render() {
@@ -32,7 +38,12 @@ export default class App extends React.Component {
         <div className="content">
           <Header />
           <InputBox addNew={this.addNew.bind(this)}/>
-          <TodoList items={this.state.items} filter={this.state.filter}/>
+          <TodoList 
+            items={this.state.items} 
+            filter={this.state.filter} 
+            handleOnChangeStatus={this.handleOnChangeStatus.bind(this)}
+            {...this.state}
+          />
           <Footer 
             count={this.state.items.length} 
             handleOnChangeFilter={this.handleOnChangeFilter.bind(this)}
