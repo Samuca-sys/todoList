@@ -105,6 +105,12 @@ footer {
 footer span {
   font-weight: normal;
 }
+
+footer strong span {
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--gray-400);
+}
+
 nav {
   flex: 1;
 
@@ -116,6 +122,21 @@ nav {
 nav > div {
   display: flex;
   align-items: center;
+}
+
+nav img {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 0.5rem 0 0;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s all;
+}
+
+nav img:hover,
+nav img.selected {
+  opacity: 1;
 }
 
 nav strong {
