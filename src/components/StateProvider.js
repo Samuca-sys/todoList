@@ -2,11 +2,13 @@ import React from 'react';
 
 import {getAll, addToList, updateStatus} from './../services/todo'
 import {wrapChildrenWith, objectWithOnly} from './../services/common'
+import {MODE_CREATE} from './../services/mode'
 
 export default class StateProvider extends React.Component {
   constructor() {
     super();
     this.state = {
+      mode: MODE_CREATE,
       filter: 'all',
       items: getAll()
     }

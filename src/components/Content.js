@@ -1,19 +1,19 @@
 import Footer from './Footer';
 import Header from './Header';
-import InputBox from './InputBox';
+import InputWrapper from './InputWrapper';
 import TodoList from './TodoList';
 
 export default function Content(props) {
-  const {items, filter} = props.data;
+  const {items, filter, mode} = props.data;
   const {addNew, handleOnChangeFilter, handleOnChangeStatus} = props.actions;
   const count = items.length;
   
   return (
     <>
       <Header />
-      <InputBox addNew={addNew}/>
+      <InputWrapper {...{addNew, mode}}/>
       <TodoList {...{items, filter, handleOnChangeStatus}}/>
-      <Footer {...{count, filter, handleOnChangeFilter}}/>
+      <Footer {...{count, filter, handleOnChangeFilter, mode}}/>
     </>
   )
 }
