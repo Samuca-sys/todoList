@@ -1,8 +1,8 @@
-import Footer from './Footer';
-import Header from './Header';
-import TodoList from './TodoList';
+import Footer from '../ui/Footer';
+import Header from '../ui/Header';
+import TodoList from '../ui/TodoList';
 
-import {applyFilter, search} from './../services/filter'
+import {applyFilter, search} from '../../services/filter'
 
 export default function Content(props) {
   const {items, filter, mode, query} = props.data;

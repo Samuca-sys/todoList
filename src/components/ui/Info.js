@@ -1,4 +1,4 @@
-import {MODE_NONE} from '../services/mode'
+import {MODE_NONE} from '../../services/mode'
 
 export default function Info(props) {
   const INFO_SHORTCUT_KEYS = "Press '/' to search an 'N' to create a new item.";

@@ -1,7 +1,7 @@
 import InputBox from "./InputBox";
 import SearchBox from "./SearchBox";
 
-import {MODE_CREATE, MODE_SEARCH} from './../services/mode'
+import {MODE_CREATE, MODE_SEARCH} from '../../services/mode'
 
 export default function InputWrapper(props){
   const {mode, addNew, query, handleOnChangeSearchBox} = props;

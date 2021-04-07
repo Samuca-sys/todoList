@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {wrapChildrenWith} from './../util/common'
-import {getNextModeByKey} from './../services/mode'
+import {wrapChildrenWith} from '../../util/common'
+import {getNextModeByKey} from '../../services/mode'
 
 export default class KeyStrokeHandler extends React.Component {
   constructor() {
