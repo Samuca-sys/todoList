@@ -1,5 +1,5 @@
-import addImg from '../../assets/add.svg'
-import searchImg from '../../assets/search.svg'
+import addImg from '../../assets/images/add.svg'
+import searchImg from '../../assets/images/add.svg'
 
 import {MODE_NONE, MODE_CREATE, MODE_SEARCH} from '../../services/mode'
 
