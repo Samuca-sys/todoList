@@ -150,7 +150,7 @@ nav strong {
   gap: 0.25rem;
 }
 
-a {
+button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,12 +158,14 @@ a {
   border: 1px solid var(--gray-200);
   border-radius: 0.2rem;
   padding: 0.2rem 1rem 0.2rem 1rem;
+  background: transparent;
+  font-size: 1rem;
 }
 
-a:hover {
+button:hover {
   filter: brightness(0.8);
 }
 
-a.selected {
+button.selected {
   border-color: var(--gray-400);
 }

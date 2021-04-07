@@ -19,7 +19,7 @@ export default class CheckBox extends React.Component {
     return(
       <input 
         type="checkbox" 
-        isChecked={this.state.isChecked} 
+        ischecked={this.state.isChecked} 
         onChange={this.handleCheckBoxChange.bind(this)}
       />
     )
