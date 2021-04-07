@@ -12,7 +12,7 @@ export default function ButtonWrapper(props) {
       <img 
         src={addImg} 
         alt="add signal" 
-        classname={(isCreateMode() ? 'selected': '')}
+        className={(isCreateMode() ? 'selected': '')}
         onClick = {
           () => handleOnClickChangeMode(
             isCreateMode() ? MODE_NONE : MODE_CREATE
@@ -22,7 +22,7 @@ export default function ButtonWrapper(props) {
       <img 
         src={searchImg} 
         alt="search signal" 
-        classname={(isSearchMode() ? 'selected': '')}
+        className={(isSearchMode() ? 'selected': '')}
         onClick = {
           () => handleOnClickChangeMode(
             isSearchMode() ? MODE_NONE : MODE_SEARCH

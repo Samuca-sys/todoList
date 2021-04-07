@@ -32,14 +32,15 @@ export default class InputBox extends React.Component {
 
   render () {
     return (
-    <input 
-      type="text"   
-      placeholder="Add New" 
-      className="add-todo"
-      value={this.state.value} //value property will receive value state
-      //binding this to method handleInputBoxChange in onChange property
-      onChange={this.handleInputBoxChange.bind(this)}
-      onKeyUp={this.handleOnKeyUp.bind(this)}/>
+      <input autoFocus
+        type="text"   
+        placeholder="Add New" 
+        className="add-todo"
+        value={this.state.value} //value property will receive value state
+        //binding this to method handleInputBoxChange in onChange property
+        onChange={this.handleInputBoxChange.bind(this)}
+        onKeyUp={this.handleOnKeyUp.bind(this)}
+      />
     )
   }
 }
