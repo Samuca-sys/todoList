@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {getAll, addToList, updateStatus} from './../services/todo'
-import {wrapChildrenWith, objectWithOnly} from './../services/common'
+import {wrapChildrenWith, objectWithOnly} from './../util/common'
 import {MODE_CREATE, MODE_NONE} from './../services/mode'
 
 export default class StateProvider extends React.Component {

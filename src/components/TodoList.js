@@ -1,10 +1,7 @@
 import FilteredList from "./FilteredList";
 
-import {applyFilter} from './../services/filter'
-
 export default function TodoList(props) {
-  const {items, filter, handleOnChangeStatus} = props;
-  const filteredItems= applyFilter(items, filter)
+  const {handleOnChangeStatus, filteredItems} = props;
 
   return (
     <section>

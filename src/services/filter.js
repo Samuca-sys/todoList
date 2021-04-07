@@ -1,3 +1,5 @@
+import {stringInclues} from '../util/common'
+
 const FILTER_ALL = 'all';
 const FILTER_ACTIVE = 'active';
 const FILTER_COMPLETED = 'completed';
@@ -10,6 +12,12 @@ export function applyFilter(list, filter) {
       return list.filter(item => item.active !== true);
   default: return list;
   }
+}
+
+export function search(list, query) {
+  let lowerCaseTrimmedQuery = query.trim().toLowerCase();
+
+  return list.filter(({text}) => stringInclues(text.toLowerCase(), lowerCaseTrimmedQuery))
 }
 
 export function getOptions() {

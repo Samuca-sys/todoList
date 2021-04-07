@@ -2,6 +2,8 @@ import Footer from './Footer';
 import Header from './Header';
 import TodoList from './TodoList';
 
+import {applyFilter, search} from './../services/filter'
+
 export default function Content(props) {
   const {items, filter, mode, query} = props.data;
   const {
@@ -12,11 +14,12 @@ export default function Content(props) {
     handleOnChangeSearchBox
   } = props.actions;
   const count = items.length;
+  const filteredItems= search(applyFilter(items, filter),query)
   
   return (
     <>
       <Header {...{addNew, mode, query, handleOnChangeSearchBox}}/>
-      <TodoList {...{items, filter, handleOnChangeStatus}}/>
+      <TodoList {...{filteredItems, filter, handleOnChangeStatus}}/>
       <Footer {...
         {count, filter, handleOnChangeFilter, mode, handleOnClickChangeMode}
       }/>

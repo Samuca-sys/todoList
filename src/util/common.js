@@ -23,3 +23,14 @@ export function objectWithOnly(object, attributes) {
 export function wrapChildrenWith(children, props) {
   return React.Children.map(children, child => React.cloneElement(child, props))
 }
+
+/**
+ * Checks if the string includes the substring
+ * 
+ * @param {String} string
+ * @param {String} substring
+ * @param {Boolean}
+ */
+export function stringInclues(string, substring) {
+  return  string.indexOf(substring) !== -1;
+}
