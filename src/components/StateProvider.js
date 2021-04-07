@@ -2,7 +2,7 @@ import React from 'react';
 
 import {getAll, addToList, updateStatus} from './../services/todo'
 import {wrapChildrenWith, objectWithOnly} from './../services/common'
-import {MODE_CREATE} from './../services/mode'
+import {MODE_CREATE, MODE_NONE} from './../services/mode'
 
 export default class StateProvider extends React.Component {
   constructor() {
@@ -31,6 +31,11 @@ export default class StateProvider extends React.Component {
     this.setState({items: updatedList});
   }
 
+  handleOnClickChangeMode(mode = MODE_NONE) {
+    this.setState({mode});
+  }
+
+
   handleOnChangeSearchBox(text) {
     this.setState({query: text || ''});
   }
@@ -39,7 +44,12 @@ export default class StateProvider extends React.Component {
     let children = wrapChildrenWith(this.props.children, {
       data: this.state,
       actions: objectWithOnly(this, 
-        ['addNew', 'handleOnChangeFilter', 'handleOnChangeStatus', 'handleOnChangeSearchBox']
+        [
+          'addNew', 
+          'handleOnChangeFilter', 
+          'handleOnChangeStatus', 
+          'handleOnClickChangeMode',
+          'handleOnChangeSearchBox']
       )
     });
     return <>{children}</>

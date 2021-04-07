@@ -8,6 +8,7 @@ export default function Content(props) {
     addNew, 
     handleOnChangeFilter, 
     handleOnChangeStatus, 
+    handleOnClickChangeMode,
     handleOnChangeSearchBox
   } = props.actions;
   const count = items.length;
@@ -16,7 +17,9 @@ export default function Content(props) {
     <>
       <Header {...{addNew, mode, query, handleOnChangeSearchBox}}/>
       <TodoList {...{items, filter, handleOnChangeStatus}}/>
-      <Footer {...{count, filter, handleOnChangeFilter, mode}}/>
+      <Footer {...
+        {count, filter, handleOnChangeFilter, mode, handleOnClickChangeMode}
+      }/>
     </>
   )
 }
