@@ -1,4 +1,5 @@
 import Content from "./Content";
+import KeyStrokeHandler from "./KeyStrokeHandler";
 import StateProvider from "./StateProvider";
 
 export default function App() {
@@ -6,7 +7,9 @@ export default function App() {
       <div className="container">
         <div className="content">
           <StateProvider>
-            <Content />
+            <KeyStrokeHandler>
+              <Content />
+            </KeyStrokeHandler>
           </StateProvider>
         </div>
       </div>  
