@@ -4,18 +4,28 @@ import {wrapChildrenWith} from './../util/common'
 import {getNextModeByKey} from './../services/mode'
 
 export default class KeyStrokeHandler extends React.Component {
+  constructor() {
+    super();
+    this.handleKeyUp = this.handleKeyUp.bind(this)
+  }
+
+  escFunction(event){
+    if(event.keyCode === 27){
+      console.log("oi")
+    }
+  }
+
   componentDidMount() {
-    window.addEventListener('keydown', this.handleKeyUp.bind(this))
+    window.addEventListener('keydown', this.handleKeyUp, false);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyUp)
+    window.removeEventListener('keydown', this.handleKeyUp, false);
   }
 
   handleKeyUp(event) {
     const {mode} = this.props.data;
-    const nextMode = getNextModeByKey(mode, event.KeyCode);
-    console.log(mode, event.KeyCode)
+    const nextMode = getNextModeByKey(mode, event.keyCode);
     
     if(nextMode !== mode) {
       event.preventDefault();
