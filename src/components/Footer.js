@@ -1,9 +1,11 @@
 import ButtonWrapper from "./ButtonWrapper"
 import Filter from "./Filter"
+import Info from "./Info"
 
 export default function Footer(props) {
-  const {count, filter, handleOnChangeFilter} = props
+  const {count, filter, handleOnChangeFilter,mode} = props
   return (
+
     <footer>
       <nav>
         <div>
@@ -15,6 +17,8 @@ export default function Footer(props) {
         </div>
       <Filter filter={filter} changeFilter={handleOnChangeFilter}/>
       </nav>
+      <Info {...{mode}}/>
     </footer>
+
   )
 }
