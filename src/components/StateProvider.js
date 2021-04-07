@@ -8,6 +8,7 @@ export default class StateProvider extends React.Component {
   constructor() {
     super();
     this.state = {
+      query: '',
       mode: MODE_CREATE,
       filter: 'all',
       items: getAll()
@@ -29,11 +30,16 @@ export default class StateProvider extends React.Component {
 
     this.setState({items: updatedList});
   }
+
+  handleOnChangeSearchBox(text) {
+    this.setState({query: text || ''});
+  }
+
   render() {
     let children = wrapChildrenWith(this.props.children, {
       data: this.state,
       actions: objectWithOnly(this, 
-        ['addNew', 'handleOnChangeFilter', 'handleOnChangeStatus']
+        ['addNew', 'handleOnChangeFilter', 'handleOnChangeStatus', 'handleOnChangeSearchBox']
       )
     });
     return <>{children}</>
