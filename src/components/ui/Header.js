@@ -1,10 +1,10 @@
-import InputWrapper from './InputWrapper';
+import InputWrapper from "./InputWrapper";
 
 export default function Header(props) {
   return (
     <header>
-        <h1>THINGS TO DO</h1>
-        <InputWrapper {...props}/>
+      <h1>THINGS TO DO</h1>
+      <InputWrapper {...props} />
     </header>
-  )
+  );
 }

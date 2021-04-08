@@ -1,12 +1,13 @@
 export default function SearchBox(props) {
-  const {query, handleOnChangeSearchBox} = props
+  const { query, handleOnChangeSearchBox } = props;
 
   return (
-    <input autoFocus
+    <input
+      autoFocus
       type="text"
       value={query}
-      onChange={event => handleOnChangeSearchBox(event.target.value)}
+      onChange={(event) => handleOnChangeSearchBox(event.target.value)}
       placeholder="Search"
     />
-  )
+  );
 }

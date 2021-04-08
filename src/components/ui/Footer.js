@@ -1,24 +1,22 @@
-import ButtonWrapper from "./ButtonWrapper"
-import Filter from "./Filter"
-import Info from "./Info"
+import ButtonWrapper from "./ButtonWrapper";
+import Filter from "./Filter";
+import Info from "./Info";
 
 export default function Footer(props) {
-  const {count, filter, handleOnChangeFilter,mode} = props
+  const { count, filter, handleOnChangeFilter, mode } = props;
   return (
-
     <footer>
       <nav>
         <div>
-          <ButtonWrapper {...props}/>
+          <ButtonWrapper {...props} />
           <strong>
-          <span>{count} </span>
+            <span>{count} </span>
           </strong>
           <span>items left</span>
         </div>
-      <Filter filter={filter} changeFilter={handleOnChangeFilter}/>
+        <Filter filter={filter} changeFilter={handleOnChangeFilter} />
       </nav>
-      <Info {...{mode}}/>
+      <Info {...{ mode }} />
     </footer>
-
-  )
+  );
 }

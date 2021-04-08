@@ -1,57 +1,55 @@
-import React from 'react';
+import React from "react";
 
-import {getAll, addToList, updateStatus} from '../../services/todo'
-import {wrapChildrenWith, objectWithOnly} from '../../util/common'
-import {MODE_CREATE, MODE_NONE} from '../../services/mode'
+import { getAll, addToList, updateStatus } from "../../services/todo";
+import { wrapChildrenWith, objectWithOnly } from "../../util/common";
+import { MODE_CREATE, MODE_NONE } from "../../services/mode";
 
 export default class StateProvider extends React.Component {
   constructor() {
     super();
     this.state = {
-      query: '',
+      query: "",
       mode: MODE_CREATE,
-      filter: 'all',
-      items: getAll()
-    }
+      filter: "all",
+      items: getAll(),
+    };
   }
   addNew(text) {
-    let updatedList = addToList(this.state.items, {text, completed: false});
+    let updatedList = addToList(this.state.items, { text, completed: false });
     this.setState({
-      items: updatedList
-    })
+      items: updatedList,
+    });
   }
 
   handleOnChangeFilter(filter) {
-    this.setState({filter})
+    this.setState({ filter });
   }
 
   handleOnChangeStatus(itemId, completed) {
     const updatedList = updateStatus(this.state.items, itemId, completed);
 
-    this.setState({items: updatedList});
+    this.setState({ items: updatedList });
   }
 
   handleOnClickChangeMode(mode = MODE_NONE) {
-    this.setState({mode});
+    this.setState({ mode });
   }
 
-
   handleOnChangeSearchBox(text) {
-    this.setState({query: text || ''});
+    this.setState({ query: text || "" });
   }
 
   render() {
     let children = wrapChildrenWith(this.props.children, {
       data: this.state,
-      actions: objectWithOnly(this, 
-        [
-          'addNew', 
-          'handleOnChangeFilter', 
-          'handleOnChangeStatus', 
-          'handleOnClickChangeMode',
-          'handleOnChangeSearchBox']
-      )
+      actions: objectWithOnly(this, [
+        "addNew",
+        "handleOnChangeFilter",
+        "handleOnChangeStatus",
+        "handleOnClickChangeMode",
+        "handleOnChangeSearchBox",
+      ]),
     });
-    return <>{children}</>
+    return <>{children}</>;
   }
 }

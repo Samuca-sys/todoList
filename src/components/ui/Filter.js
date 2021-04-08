@@ -1,18 +1,22 @@
-import {getOptions} from '../../services/filter';
+import { getOptions } from "../../services/filter";
 
 export default function Filter(props) {
-  const { filter, changeFilter } = props
-  const getClass = (key) => (key === filter ? 'selected' : '');
+  const { filter, changeFilter } = props;
+  const getClass = (key) => (key === filter ? "selected" : "");
   const options = getOptions();
 
   return (
     <div className="filter-list">
       {/*list the enumerable properties of an object*/}
-      {Object.keys(options).map(key =>(
-        <button key={key} onClick={() => changeFilter(key)} className={getClass(key)}>
+      {Object.keys(options).map((key) => (
+        <button
+          key={key}
+          onClick={() => changeFilter(key)}
+          className={getClass(key)}
+        >
           {options[key]}
         </button>
-      ))}  
+      ))}
     </div>
-  )
+  );
 }
