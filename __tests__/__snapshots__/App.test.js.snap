@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="content"
+  >
+    <header>
+      <h1>
+        THINGS TO DO
+      </h1>
+      <input
+        autoFocus={true}
+        className="add-todo"
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        placeholder="Add New"
+        type="text"
+        value=""
+      />
+    </header>
+    <section>
+      <ul
+        className="item-list"
+      >
+        <li
+          className=""
+        >
+          <label>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            Learn JavaScript
+          </label>
+        </li>
+        <li
+          className=""
+        >
+          <label>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            Learn React
+          </label>
+        </li>
+        <li
+          className=""
+        >
+          <label>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            Build a React App
+          </label>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <nav>
+        <div>
+          <img
+            alt="add signal"
+            className="selected"
+            onClick={[Function]}
+            src="add.svg"
+          />
+          <img
+            alt="search signal"
+            className=""
+            onClick={[Function]}
+            src="search.svg"
+          />
+          <strong>
+            <span>
+              3
+               
+            </span>
+          </strong>
+          <span>
+            items left
+          </span>
+        </div>
+        <div
+          className="filter-list"
+        >
+          <button
+            className="selected"
+            onClick={[Function]}
+          >
+            All
+          </button>
+          <button
+            className=""
+            onClick={[Function]}
+          >
+            Active
+          </button>
+          <button
+            className=""
+            onClick={[Function]}
+          >
+            Completed
+          </button>
+        </div>
+      </nav>
+      <p>
+        Press 'Esc' to cancel.
+      </p>
+    </footer>
+  </div>
+</div>
+`;

@@ -1,13 +1,8 @@
 import React from "react";
-import {shallow} from 'enzyme';
 import App from '../src/components/wrappers/App'
+import renderer from 'react-test-renderer';
 
-describe('Testing App Component', () => {
-  it('should render corretly', () => {
-    const wrapper = shallow(
-      <App />
-    );
-
-    expect(wrapper).toMatchSnapshot();
-  });
+it('renders a snapshot', () => {
+  const tree = renderer.create(<App/>).toJSON();
+  expect(tree).toMatchSnapshot();
 });

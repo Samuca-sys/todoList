@@ -76,7 +76,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
+    "test": "node scripts/test.js",
     "format": "prettier --write src/*/*/*.js"
   },
   "eslintConfig": {
@@ -102,19 +102,20 @@
   },
   "jest": {
     "roots": [
-      "<rootDir>/src"
+      "<rootDir>/"
     ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
     ],
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+      "react-app-polyfill/jsdom",
+      "<rootDir>/__tests__/setup.js"
     ],
     "setupFilesAfterEnv": [],
     "testMatch": [
-      "<rootDir>/__tests__/**/?(*.){spec|test}.{js}?(x)",
-      "<rootDir>/__tests__/setup.js"
+      "<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
     "testEnvironment": "jsdom",
     "testRunner": "C:\\Users\\samue\\Documents\\MD\\react-todo-app\\node_modules\\jest-circus\\runner.js",
