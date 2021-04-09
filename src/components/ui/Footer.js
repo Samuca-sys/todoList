@@ -12,7 +12,7 @@ export default function Footer(props) {
           <strong>
             <span>{count} </span>
           </strong>
-          <span>items left</span>
+          <span>left</span>
         </div>
         <Filter filter={filter} changeFilter={handleOnChangeFilter} />
       </nav>
